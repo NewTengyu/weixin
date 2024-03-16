@@ -1,0 +1,12 @@
+/* pages/echart/echart.wxss */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+}
+
+.dark {
+  background-color: #100c2a;
+}

@@ -1,9 +1,5 @@
 {
   "description": "项目配置文件",
-  "packOptions": {
-    "ignore": [],
-    "include": []
-  },
   "setting": {
     "urlCheck": false,
     "es6": true,
@@ -26,12 +22,11 @@
     },
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": true,
-    "uglifyFileName": true
+    "uglifyFileName": true,
+    "packNpmRelationList": [],
+    "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.11.3",
-  "appid": "wxaefd4cc9b3a896fc",
-  "projectname": "Lebu",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "cloudfunctionRoot": "functions/",
@@ -40,5 +35,11 @@
   "editorSetting": {
     "tabIndent": "auto",
     "tabSize": 2
-  }
+  },
+  "libVersion": "2.11.3",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "appid": "wx6a7eb85e2203155e"
 }
