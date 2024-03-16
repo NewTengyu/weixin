@@ -12,8 +12,13 @@
     "pages/login/setting",
     "pages/share/index",
     "pages/bmi/index",
+<<<<<<< HEAD
     "pages/message/index",
     "pages/chat/index"
+=======
+    "pages/game/game",
+    "pages/echart/echart"
+>>>>>>> main
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -35,6 +40,16 @@
       "iconPath": "@runIcon",
       "selectedIconPath": "@runSelectedIcon",
       "text": "跑步"
+    },{
+      "pagePath": "pages/game/game",
+      "iconPath": "@runIcon",
+      "selectedIconPath": "@runSelectedIcon",
+      "text": "运动"
+    },{
+      "pagePath": "pages/echart/echart",
+      "iconPath": "@runIcon",
+      "selectedIconPath": "@runSelectedIcon",
+      "text": "图表"
     },
     {
       "pagePath": "pages/message/index",
@@ -53,6 +68,12 @@
     },
     "scope.writePhotosAlbum": {
       "desc": "您的相册授权仅用于保存您的运动海报"
+    }
+  },
+  "plugins": {
+    "echarts": {
+      "version": "2.1.1",
+      "provider": "wx1db9e5ab1149ea03"
     }
   },
   "darkmode": false,

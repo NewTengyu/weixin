@@ -1,0 +1,20 @@
+<!--pages/game/game.wxml-->
+<view class="game">
+
+  <view class="boss-bar">
+    <view class="boss-wrapper" animation="{{animationData}}">
+      <image id="boss" src="/static/boss/{{boss}}.png" class="boss"></image>
+    </view>
+    <view>
+      <text class="name-bar">图书之神</text>
+      <progress percent="{{health}}" id="health-bar" class="health-bar" show-info></progress>
+    </view>
+  </view>
+
+  <view class="button-group">
+    <button class="button" bindtap="tapAttack" data-damage="10">攻击1</button>
+    <button class="button" bindtap="tapAttack" data-damage="10">攻击2</button>
+    <button class="button" bindtap="tapAttack" data-damage="10">攻击3</button>
+    <button class="button" bindtap="tapAttack" data-damage="10">攻击4</button>
+  </view>
+</view>

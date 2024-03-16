@@ -1,0 +1,5 @@
+<!--pages/echart/echart.wxml-->
+<view class="page {{ theme }}">
+  <chart chart-class="chart" option="{{ option }}" width="95vw" height="80vw" bindinstance="onInstance" />
+  <chart chart-class="chart" option="{{ option2 }}" width="95vw" height="80vw" bindinstance="onInstance" />
+</view>
