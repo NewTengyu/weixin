@@ -12,13 +12,10 @@
     "pages/login/setting",
     "pages/share/index",
     "pages/bmi/index",
-<<<<<<< HEAD
     "pages/message/index",
-    "pages/chat/index"
-=======
+    "pages/chat/index",
     "pages/game/game",
     "pages/echart/echart"
->>>>>>> main
   ],
   "window": {
     "backgroundTextStyle": "light",
