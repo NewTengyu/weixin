@@ -11,7 +11,9 @@
     "pages/login/index",
     "pages/login/setting",
     "pages/share/index",
-    "pages/bmi/index"
+    "pages/bmi/index",
+    "pages/message/index",
+    "pages/chat/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -33,6 +35,10 @@
       "iconPath": "@runIcon",
       "selectedIconPath": "@runSelectedIcon",
       "text": "跑步"
+    },
+    {
+      "pagePath": "pages/message/index",
+      "text": "消息"
     },
     {
       "pagePath": "pages/me/index",
