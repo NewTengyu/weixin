@@ -1,5 +1,4 @@
 <!--pages/chat/index.wxml-->
-<t-navbar class="nav-bar" title="{{ name }}" left-arrow />
 <scroll-view class="content" scroll-y scroll-into-view="{{ anchor }}">
   <view class="messages">
     <block wx:for="{{ messages }}" wx:key="index">
