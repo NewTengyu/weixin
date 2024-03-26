@@ -1,5 +1,5 @@
 //app.js
-
+import { getChatMessage,getAIToken } from "/services/chat.js"
 
 
 App({
@@ -42,10 +42,28 @@ App({
         }
       }
     })
-    
+    getAIToken().then((token) => {
+      that.globalData.aiToken = token
+    }).catch(error => {
+      console.log(error); // 处理或打印错误
+      that.globalData.aiToken = null
+    })
+
+    getChatMessage().then((message) => {
+      that.globalData.chatMessage = message
+    }).catch(error => {
+      wx.setStorage({
+        key: "chat",
+        data: []
+      })
+      that.globalData.chatMessage = []
+    })
   },
+  
   globalData: {
     userInfo: null,
-    openid: null
+    openid: null,
+    aiToken: null,
+    chatMessage: null
   }
 })

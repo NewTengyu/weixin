@@ -1,8 +1,8 @@
 {
+  "navigationBarTitleText": "聊天",
   "usingComponents": {
     "t-avatar": "tdesign-miniprogram/avatar/avatar",
     "t-loading": "tdesign-miniprogram/loading/loading",
     "t-button": "tdesign-miniprogram/button/button"
-  },
-  "navigationStyle": "custom"
+  }
 }

@@ -9,7 +9,8 @@ Page({
   data: {
     boss: "boss",
     health: 100,
-    // animation: null,
+    
+    num_Method2: [0, 0, 0, 0],
     animationData: {},
   },
   tapAttack: function (e) {

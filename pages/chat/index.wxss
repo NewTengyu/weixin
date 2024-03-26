@@ -1,5 +1,4 @@
 /* pages/chat/index.wxss */
-/* pages/chat/index.wxss */
 page {
   display: flex;
   flex-direction: column;

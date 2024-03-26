@@ -51,7 +51,7 @@
       "pagePath": "pages/chat/index",
       "iconPath": "@runIcon",
       "selectedIconPath": "@runSelectedIcon",
-      "text": "消息"
+      "text": "聊天"
     },
     {
       "pagePath": "pages/me/index",
