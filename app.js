@@ -1,6 +1,10 @@
 //app.js
 import { getChatMessage,getAIToken } from "/services/chat.js"
+// import * as ec from './echarts.min';
+// const comp = requirePlugin('echarts');
 
+// 设置自行引入的 echarts 依赖库
+// comp.echarts = ec;
 
 App({
   onLaunch: function() {

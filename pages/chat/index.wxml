@@ -1,6 +1,9 @@
 <!--pages/chat/index.wxml-->
 <scroll-view class="content" scroll-y scroll-into-view="{{ anchor }}">
   <view class="messages">
+
+
+
     <block wx:for="{{ messages }}" wx:key="index">
       <view wx:if="{{ index === 0 || item.time - messages[index - 1].time > 120000 }}" class="time">{{ utils.formatTime(item.time) }}</view>
 
@@ -13,7 +16,7 @@
       </view>
 
       <view wx:else class="message-area">
-        <t-avatar image="{{ avatar }}" size="small" />
+        <t-avatar image="/static/chat/avatar.png" size="small" />
         <view class="message other" >
           <text space="nbsp">{{ item.content }}</text>
         </view>

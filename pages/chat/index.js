@@ -41,9 +41,9 @@ const mockData = [{
 Page({
   /** 页面的初始数据 */
   data: {
-    myAvatar: '/static/chat/avatar.png',   // 自己的头像
+    myAvatar: '/icon/avatar.png',   // 自己的头像
     userId: 1,         // 对方userId
-    avatar: '/static/chat/avatar.png',           // 对方头像
+    avatar: '/icon/avatar.png',           // 对方头像
     name: 'Chat老师',             // 对方昵称
     messages: [],         // 消息列表 { messageId, from, content, time, read }
     input: '',            // 输入框内容
@@ -144,10 +144,14 @@ Page({
     wx.nextTick(this.scrollToBottom)
     // 回复消息
     getAIContent(getApp().globalData.aiToken,content).then(aidata => {
+      let aiContent = aidata.result
+      if (aidata.error_code) {
+        aiContent = '不好意思我们出现了问题，努力解决中......'
+      }
       const message = {
         messageId: messageCount++,
         from: 1,
-        content: aidata.result,
+        content: aiContent,
         time: Date.now(),
         read: false
       }

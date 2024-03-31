@@ -16,7 +16,7 @@ export function getChatMessage(){
 
 /** 获取AI对话令牌 */
 export function getAIToken(){
-  const tokenUrl = "https://aip.baidubce.com/oauth/2.0/token?client_id=lZ5Hkj3dLIGCHhQYhTPPg2IN&client_secret=qi2MxsdUOP8nM6s9s1fV4KaZgg9TLAWf&grant_type=client_credentials";
+  const tokenUrl = "https://aip.baidubce.com/oauth/2.0/token?client_id=2V7pRUO3CDmykGambwTD7yMc&client_secret=9QAiIClPv1e4YumiSMt3CDlO2AkxWUYp&grant_type=client_credentials";
   return new Promise((resolve, reject) => {
     wx.request({
       url: tokenUrl,

@@ -6,7 +6,15 @@ Page({
    */
   data: {
     theme: 'light',
-    option: {
+    option3: {
+      title: {
+        text: '周运动量'
+      },
+      legend: {
+        left: '50%',
+        scroll: 'scroll',
+        data:  ['徒手侧平举', '半蹲', '开合跳', '前后交叉小跑']
+      },
       xAxis: {
         type: 'category',
         data: ['一', '二', '三', '四', '五', '六', '日'],
@@ -45,7 +53,7 @@ Page({
         splitNumber: 4,
       },
       series: [{
-          name: '动作1',
+          name: '徒手侧平举',
 
           stack: 'Ad',
           data: [
@@ -77,21 +85,21 @@ Page({
           },
         },
         {
-          name: '动作2',
+          name: '半蹲',
           type: 'bar',
           barWidth: '50%',
           stack: 'Ad',
           data: [18203, 23489, 29034, 104970, 11744, 30230],
         },
         {
-          name: '动作3',
+          name: '开合跳',
           type: 'bar',
           barWidth: '50%',
           stack: 'Ad',
           data: [19325, 23438, 31000, 121594, 134141, 81807],
         },
         {
-          name: '动作4',
+          name: '前后交叉小跑',
           type: 'bar',
           barWidth: '50%',
           stack: 'Ad',
@@ -104,7 +112,15 @@ Page({
         }
       ]
     },
-    option2: {
+    option4: {
+      title: {
+        text: '日运动时间'
+      },
+      legend: {
+        left: '50%',
+        scroll: 'scroll',
+        data:  ['徒手侧平举', '半蹲', '开合跳', '前后交叉小跑']
+      },
       xAxis: {
         type: 'category',
         splitLine: {
@@ -157,7 +173,7 @@ Page({
         max: 60,
       },
       series: [{
-          name: '动作1',
+          name: '徒手侧平举',
           stack: 'Ad',
           data: [
             [0, 12],
@@ -172,7 +188,7 @@ Page({
           barWidth: '50%',
         },
         {
-          name: '动作2',
+          name: '半蹲',
           type: 'bar',
           barWidth: '50%',
           stack: 'Ad',
@@ -187,7 +203,7 @@ Page({
           ],
         },
         {
-          name: '动作3',
+          name: '开合跳',
           type: 'bar',
           barWidth: '50%',
           stack: 'Ad',
@@ -202,7 +218,7 @@ Page({
           ],
         },
         {
-          name: '动作4',
+          name: '前后交叉小跑',
           type: 'bar',
           barWidth: '50%',
           stack: 'Ad',
@@ -220,6 +236,85 @@ Page({
             [6, 13]
           ],
         }
+      ]
+    },
+    option : {
+      title: {
+        text: '运动图'
+      },
+      legend: {
+        data: ['以往', '今日',]
+      },
+      radar: {
+        // shape: 'circle',
+        center:['50%', '50%'],
+        radius: '50%',
+        indicator: [
+          { name: '徒手侧平举', max: 6500 },
+          { name: '半蹲', max: 16000 },
+          { name: '开合跳', max: 30000 },
+          { name: '前后交叉小跑', max: 38000 }
+        ]
+      },
+      series: [
+        {
+          name: 'Budget vs spending',
+          type: 'radar',
+          data: [
+            {
+              value: [4200, 3000, 20000, 35000],
+              name: '以往'
+            },
+            {
+              value: [5000, 14000, 28000, 26000],
+              name: '今日'
+            }
+          ]
+        }
+      ]
+    },
+    option2 : {
+      title: {
+        text: '数据统计'
+      },
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        }
+      },
+      legend: {},
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+      },
+      yAxis: {
+        type: 'category',
+        data: ['徒手侧平举', '半蹲', '开合跳', '前后交叉小跑']
+      },
+      series: [
+        {
+          name: '综合数据',
+          type: 'bar',
+          barWidth: '35%',
+          itemStyle:{
+            borderRadius:[0,50,50,0]
+          },
+          label: {
+            show: true,
+            position: 'inside',
+            color: '#eee',
+            formatter: "{c}"
+        },
+          data: [100, 100, 100, 100]
+        },
+       
       ]
     },
   },
