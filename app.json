@@ -43,14 +43,14 @@
       "text": "运动"
     },{
       "pagePath": "pages/echart/echart",
-      "iconPath": "@runIcon",
-      "selectedIconPath": "@runSelectedIcon",
+      "iconPath": "@echartIcon",
+      "selectedIconPath": "@echartSelectedIcon",
       "text": "图表"
     },
     {
       "pagePath": "pages/chat/index",
-      "iconPath": "@runIcon",
-      "selectedIconPath": "@runSelectedIcon",
+      "iconPath": "@chatIcon",
+      "selectedIconPath": "@chatSelectedIcon",
       "text": "聊天"
     },
     {
