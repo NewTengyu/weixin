@@ -1,42 +1,5 @@
 // pages/chat/index.js
-import { getAIContent } from "../../services/chat.js"
-
-
-// 模拟聊天数据
-const mockData = [{
-  userId: 1,
-  name: 'Sean',
-  avatar: '/static/chat/avatar.png',
-  messages: [{
-      messageId: 1,
-      from: 1,
-      content: '那明天准时见哦😊',
-      time: 1690646400000,
-      read: true
-    },
-    {
-      messageId: 2,
-      from: 0,
-      content: '好的，我会记得的',
-      time: 1690646400000,
-      read: true
-    },
-    {
-      messageId: 3,
-      from: 1,
-      content: '在吗？',
-      time: Date.now() - 3600000,
-      read: false
-    },
-    {
-      messageId: 4,
-      from: 1,
-      content: '有个问题想咨询一下，关于TDesign组件库如何更好地使用',
-      time: Date.now() - 3600000,
-      read: false
-    },
-  ]
-}]
+import { getAIContent,getAIToken } from "../../services/chat.js"
 
 Page({
   /** 页面的初始数据 */
@@ -53,7 +16,6 @@ Page({
 
   /** 生命周期函数--监听页面加载 */
   onLoad() {
-    // 加载 mockdata
     this.checkDataReady('chatMessage');
     this.checkDataReady('aiToken');
     const messages = getApp().globalData.chatMessage
@@ -67,26 +29,25 @@ Page({
           // 显示加载提示
           wx.showLoading({
               title: '数据加载中...',
-          })
-        
+          })                
+          if (dataName == 'aiToken') {
+            getAIToken().then((token) => {
+              getApp().globalData.aiToken = token
+              wx.hideLoading(); 
+            }).catch(error => {
+              console.log(error); // 处理或打印错误
+              getApp().globalData.aiToken = null
+              wx.hideLoading(); 
+            })
+          }
           // 检查 globalData 中的数据是否已经准备好，如果没准备好，每秒检查一次
-          let checkDataTimer = setInterval(function() {
-              if (getApp().globalData[dataName]) {
-                  clearInterval(checkDataTimer)  // 清除定时器
-                
-                  // that.setData({
-                  //     yourDataKey: getApp().globalData.yourDataKey   // 更新页面数据
-                  // })
-                
-                  // 关闭加载提示
-                  wx.hideLoading(); 
-              }
-          }, 1000);  // 每秒检查一次
+          // let checkDataTimer = setInterval(function() {
+          //     if (getApp().globalData[dataName]) {
+          //         clearInterval(checkDataTimer)  // 清除定时器
+          //         wx.hideLoading(); // 关闭加载提示
+          //     }
+          // }, 1000);  // 每秒检查一次
       } else {
-        // 如果数据已经准备好，直接更新页面数据
-        // that.setData({
-        //     yourDataKey: getApp().globalData.yourDataKey
-        // })
       }
   },
 

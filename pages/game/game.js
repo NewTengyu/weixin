@@ -7,10 +7,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    // 勿删，用于切换风格
+    // theme: "-light",
     boss: "boss",
     health: 100,
-    
-    num_Method2: [0, 0, 0, 0],
+    num_Method2: [0,10,2,5],
     animationData: {},
   },
   tapAttack: function (e) {
@@ -34,19 +35,6 @@ Page({
         animationData: animation.export()
       })
     }); // 100毫秒后开始执行新的动画
-
-    // this.animation.translateX(10).step()
-    // // 输出动画队列。经过上面两步，队列里有一个动作了
-    // this.setData({
-    //   animationData: this.animation.export()
-    // })
-
-
-    // // 开始一个新的动画
-    // this.animation.translateX(-10).step()
-    // this.setData({
-    //   animationData: this.animation.export()
-    // })
 
     var damage = e.currentTarget.dataset.damage;
     if (this.data.health - damage > 0) {

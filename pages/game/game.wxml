@@ -1,24 +1,30 @@
 <!--pages/game/game.wxml-->
+<image src="/static/boss/bg{{theme}}.png" class="bg"></image>
 <view class="game">
-
+  <view class="boss-wrapper" animation="{{animationData}}">
+    <image id="boss" src="/static/boss/{{boss}}{{theme}}.png" class="boss"></image>
+  </view>
   <view class="boss-bar">
-    <view class="boss-wrapper" animation="{{animationData}}">
-      <image id="boss" src="/static/boss/{{boss}}.png" class="boss"></image>
-    </view>
-    <view>
       <text class="name-bar">图书之神</text>
       <progress percent="{{health}}" id="health-bar" class="health-bar" show-info></progress>
-    </view>
   </view>
 
-  <view class="button-group">
-    <button class="button" bindtap="tapAttack" data-damage="10">徒手侧平举x{{num_Method2[0]}}</button>
-    <button class="button" bindtap="tapAttack" data-damage="10">前后交叉小跑x{{num_Method2[1]}}</button>
-    <button class="button" bindtap="tapAttack" data-damage="10">开合跳x{{num_Method2[2]}}</button>
-    <button class="button" bindtap="tapAttack" data-damage="10">半蹲x{{num_Method2[3]}}</button>
-  </view>
-  <view class="button-group">
-    <button class="button" >开始</button>
-    <button class="button" >结束</button>
-  </view>
+  <!-- <image id="boss" src="/static/magic/arrow.png" class="attack-effect2"></image> -->
+
+</view>
+
+<view class="card button-group">
+  <button class="item{{theme}}" bindtap="tapAttack" data-damage="10">
+  <image src="/static/magic/tscpj.jpg" class="magic"></image>
+  \n徒手侧平举x{{num_Method2[0]}}</button>
+  <button class="item{{theme}}" bindtap="tapAttack" data-damage="10">
+  <image src="/static/magic/qhjcxp.jpg" class="magic"></image>\n前后交叉小跑x{{num_Method2[1]}}</button>
+  <button class="item{{theme}}" bindtap="tapAttack" data-damage="10">
+  <image src="/static/magic/kht.jpg" class="magic"></image>\n开合跳x{{num_Method2[2]}}</button>
+  <button class="item{{theme}}" bindtap="tapAttack" data-damage="10">
+  <image src="/static/magic/bd.jpg" class="magic"></image>\n半蹲x{{num_Method2[3]}}</button>
+</view>
+<view class="card bottom-button-group">
+  <button class="start-button small" >开始</button>
+  <button class="end-button small" >结束</button>
 </view>

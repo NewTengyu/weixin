@@ -1,11 +1,8 @@
 <!--pages/echart/echart.wxml-->
-<scroll-view class="page {{ theme }}">
-
-  <view style="height:20rpx;margin-bottom: 20rpx;" />
-  <chart chart-class="chart" option="{{ option3 }}" width="90vw" height="35vh"/>
-  <chart chart-class="chart" option="{{ option4 }}" width="90vw" height="35vh" />
+<scroll-view enable-flex class="page {{ theme }}">
   <chart chart-class="chart" option="{{ option }}" width="90vw" height="35vh" />
   <!-- bindinstance="onInstance" -->
   <chart chart-class="chart" option="{{ option2 }}" width="90vw" height="35vh" />
-  <view style="height:20rpx;margin-bottom: 20rpx;" />
+  <chart chart-class="chart" option="{{ option3 }}" width="90vw" height="35vh"/>
+  <chart chart-class="chart" option="{{ option4 }}" width="90vw" height="35vh" />
 </scroll-view>

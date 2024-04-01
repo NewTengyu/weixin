@@ -1,5 +1,4 @@
 //index.js
-import uCharts from '../../utils/u-charts.min.js';
 //获取应用实例
 const app = getApp()
 
@@ -7,13 +6,6 @@ Page({
   data: {
     distance_target: wx.getStorageSync('distance'),
     kcal_target: wx.getStorageSync('kcal'),
-    series: []
-  },
-  toRun() {
-    this.vibrateFunc(1);
-    wx.navigateTo({
-      url: '../run/index'
-    })
   },
   toHistory() {
     this.vibrateFunc(1);
@@ -86,16 +78,6 @@ Page({
       prog_kcal = 100;
     }
 
-    let series = [{
-      "color": "#2fc25b",
-      "data": global_target,
-      "index": 0,
-      "legendShape": "circle",
-      "name": "正确率",
-      "pointShape": "circle",
-      "show": true,
-      "type": "arcbar"
-    }]
 
 
     let runinfo_data = [];
@@ -122,7 +104,7 @@ Page({
       runinfo_data: runinfo_data
     });
 
-    this.showArcbar("canvasArcbar", series)
+    // this.showArcbar("canvasArcbar", series)
   },
   onLoad: function () {
     
@@ -130,41 +112,6 @@ Page({
 
     
 
-  },
-  showArcbar(canvasId, chartData) {
-    // console.log(chartData)
-    new uCharts({
-      $this: this,
-      canvasId: canvasId,
-      type: 'arcbar',
-      fontSize: 11,
-      legend: {
-        show: false
-      },
-      background: '#FFFFFF',
-      pixelRatio: 1,
-      series: chartData,
-      animation: true,
-      width: 300,
-      height: 200,
-      dataLabel: true,
-      title: {
-        name: Math.round(chartData[0].data * 100) + '%',
-        color: chartData.color,
-        fontSize: 25
-      },
-      subtitle: {
-        name: "完成进度",
-        color: '#666666',
-        fontSize: 15
-      },
-      extra: {
-        arcbar: {
-          type: 'default',
-          width: 10
-        }
-      }
-    });
   },
   toDetail(e) {
     this.vibrateFunc(1);

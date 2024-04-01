@@ -8,7 +8,7 @@
 				<view class="content">
 					<image src="../../icon/run-sub.png" mode="aspectFit" style="height:5.4em"></image>
 					<view class="desc">
-						<view class="text-content"><text>运动里程:{{item.distance_data}} Km</text></view>
+						<view class="text-content"><text>运动量:{{item.distance_data}} Km</text></view>
 						<view>
 							<view class="cu-tag bg-green light sm round">{{item.time_data}}</view>
 							<view class="cu-tag bg-orange light sm round">{{item.speed_data}}</view>

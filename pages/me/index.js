@@ -11,20 +11,20 @@ Page({
     }
   },
   getUserInfo() {
-    wx.getUserProfile({
-      desc: '用于设置页显示昵称与头像',
-    }).then(res => {
-      if (res.errMsg == "getUserProfile:ok") {
-        console.log("* 用户同意授权UserInfo");
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-        wx.setStorageSync('userInfo', res.userInfo);
-      } else {
-        console.warn("* 用户拒绝授权UserInfo");
-      }
-    });
+    // wx.getUserProfile({
+    //   desc: '用于设置页显示昵称与头像',
+    // }).then(res => {
+    //   if (res.errMsg == "getUserProfile:ok") {
+    //     console.log("* 用户同意授权UserInfo");
+    //     this.setData({
+    //       userInfo: res.userInfo,
+    //       hasUserInfo: true
+    //     })
+    //     wx.setStorageSync('userInfo', res.userInfo);
+    //   } else {
+    //     console.warn("* 用户拒绝授权UserInfo");
+    //   }
+    // });
   },
   onLoad: function (options) {
     wx.setNavigationBarTitle({

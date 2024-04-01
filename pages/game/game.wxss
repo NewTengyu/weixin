@@ -1,17 +1,33 @@
 /* pages/game/game.wxss */
+.card {
+  margin: 0 20rpx;
+  width: calc(100vw - 40rpx);
+  /* background: #fff; */
+  border-radius: 20rpx;
+}
+
+.bg {
+  height:100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
 .game {
-  width: 400px;
-  margin: 0 auto;
   text-align: center;
-  background: #fff;
 }
 
 .boss-bar {
   display: flex;
+  padding: 0 30rpx;
 }
 
 .boss-wrapper {
-
   display: flex;
   margin-left: 5%;
   margin-right: 5%;
@@ -23,33 +39,133 @@
 }
 
 .boss {
-  width: 200rpx;
-  height: 200rpx;
+  width: 500rpx;
+  height: 500rpx;
 }
 
 .name-bar {
   padding-top: 15%;
   display: flex;
   margin-right: auto;
+  color: #fff;
+  font-size: xx-large;
+  font-family:SimHei;
+  font-weight:bold;
 }
 
 .health-bar {
-  /* width: 50%; */
+  color: #fff;
   padding-top: 15%;
   width: 400rpx;
-  /* background-color: red; */
 }
 
+
+.bottom-button-group {
+  padding: 20rpx 0;
+  position:fixed;
+  bottom:0;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
 .button-group {
+  margin-top: 20rpx;
   padding: 30rpx 50rpx 10rpx;
-  width: 100%;
-  height: 700rpx;
+  width: calc(100vw - 40rpx);
   box-sizing: border-box;
+  display: flex;
 }
 
-.button {
+.item{
+  background-color: green;
+    flex: 1;
+    margin: 0 5rpx 5rpx 0;
+    width: calc((100% - 40rpx - 5rpx) / 2);
+    justify-content: space-between;
+    color: #fff;
+    padding: 5rpx;
+    float: left;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    line-height: 2;
+    width: 300rpx;
+    margin: 15rpx 12rpx;
+  }
+
+.item-light{
+  background-color: lightblue;
+  flex: 1;
+  margin: 0 5rpx 5rpx 0;
+  width: calc((100% - 40rpx - 5rpx) / 2);
+  justify-content: space-between;
+  color: #fff;
+  padding: 5rpx;
   float: left;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   line-height: 2;
   width: 300rpx;
   margin: 15rpx 12rpx;
+}
+
+/* 
+.item:nth-child(2n){
+	margin-right: 0;
+} */
+
+.magic{
+  width:64rpx;
+  height:64rpx;
+}
+.small{
+  font-size: small;
+}
+
+.start-button {
+  background-color: var(--yellow);
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #fff;
+	border-radius: 5000rpx;
+}
+
+.end-button {
+  background-color: var(--red);
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #fff;
+	border-radius: 5000rpx;
+}
+
+@keyframes attack {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.attack-effect {
+  opacity: 0;
+  animation: attack 1s linear 5;
+}
+
+@keyframes attack2 {
+  0% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 0.5; transform: translateY(50vh) rotate(1000deg); }
+  100% { opacity: 1; transform: translateY(100vh); }
+}
+
+.attack-effect2 {
+  opacity: 0;
+  animation: attack2 1s linear 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: red;
 }

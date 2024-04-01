@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/game/game",
     "pages/index/index",
     "pages/run/index",
     "pages/run/statement",
@@ -13,7 +14,6 @@
     "pages/share/index",
     "pages/bmi/index",
     "pages/chat/index",
-    "pages/game/game",
     "pages/echart/echart"
   ],
   "window": {
@@ -33,19 +33,19 @@
     "color": "@tabBarColor",
     "list": [{
       "pagePath": "pages/index/index",
-      "iconPath": "@runIcon",
-      "selectedIconPath": "@runSelectedIcon",
-      "text": "跑步"
-    },{
-      "pagePath": "pages/game/game",
-      "iconPath": "@runIcon",
-      "selectedIconPath": "@runSelectedIcon",
-      "text": "运动"
+      "iconPath": "@hisIcon",
+      "selectedIconPath": "@hisSelectedIcon",
+      "text": "历史"
     },{
       "pagePath": "pages/echart/echart",
       "iconPath": "@echartIcon",
       "selectedIconPath": "@echartSelectedIcon",
       "text": "图表"
+    },{
+      "pagePath": "pages/game/game",
+      "iconPath": "@runIcon",
+      "selectedIconPath": "@runSelectedIcon",
+      "text": "运动"
     },
     {
       "pagePath": "pages/chat/index",
@@ -60,14 +60,6 @@
       "text": "我"
     }]
   },
-  "permission": {
-    "scope.userLocationBackend": {
-      "desc": "您的位置信息将用于绘制您的运动轨迹"
-    },
-    "scope.writePhotosAlbum": {
-      "desc": "您的相册授权仅用于保存您的运动海报"
-    }
-  },
   "plugins": {
     "echarts": {
       "version": "2.1.1",
@@ -76,7 +68,7 @@
   },
   "darkmode": false,
   "themeLocation":"theme.json",
-  "cloud": true,
+  "cloud": false,
   "requiredBackgroundModes": ["location"],
   "sitemapLocation": "sitemap.json"
 }

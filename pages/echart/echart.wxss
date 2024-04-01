@@ -1,12 +1,11 @@
 /* pages/echart/echart.wxss */
 .page {
+  margin-top: 30rpx;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
-  margin-left: 30rpx;
-  margin-right: 30rpx;
-  border-radius: 20rpx;
-  margin-top: 30rpx;
+  padding: 30rpx;
   background: #fff;
 }

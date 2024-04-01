@@ -16,7 +16,7 @@
       </view>
 
       <view wx:else class="message-area">
-        <t-avatar image="/static/chat/avatar.png" size="small" />
+        <t-avatar image="{{ avatar }}" size="small" />
         <view class="message other" >
           <text space="nbsp">{{ item.content }}</text>
         </view>

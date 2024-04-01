@@ -1,30 +1,15 @@
 <view class="bg-white">
-	<view class="flex padding">
-		<view class="flex-sub"></view>
-		<view class="flex-twice">
-			<!-- 运动进度概览 -->
-			<canvas canvas-id="canvasArcbar" id="canvasArcbar" class="charts"></canvas>
-		</view>
-		<view class="flex-sub"></view>
-	</view>
-	<view class="flex padding solid-bottom">
-		<view class="flex-sub"></view>
-		<view class="flex-twice text-center">
-			<button class="cu-btn bg-green round lg" bindtap="toRun">开始运动</button>
-		</view>
-		<view class="flex-sub"></view>
-	</view>
-	<!-- <view class="cu-bar bg-white solid-bottom margin-top">
+	<view class="cu-bar bg-white solid-bottom margin-top">
 		<view class='action'>
 			<text class='cuIcon-titles text-green '></text> 每周进度
 		</view>
-	</view> -->
+	</view>
 	<view class="flex padding-left padding-right solid-bottom">
 
 		<view class="flex-sub" bindtap="tips" data-type="kcal">
 			<view class="cu-bar bg-white ">
 				<view class="action">
-					<text class="cuIcon-title text-blue"></text>运动里程<text class="cuIcon-info lg text-gray"></text>
+					<text class="cuIcon-title text-blue"></text>运动量<text class="cuIcon-info lg text-gray"></text>
 				</view>
 			</view>
 			<view class="flex margin-top">
@@ -72,7 +57,7 @@
 					<view class="content">
 						<image src="../../icon/run-sub.png" mode="aspectFit" style="height:5.4em"></image>
 						<view class="desc">
-							<view class="text-content"><text >运动里程:{{runinfo_data[0].distance_data}} Km</text></view>
+							<view class="text-content"><text >运动量:{{runinfo_data[0].distance_data}} Km</text></view>
 							<view>
 								<view class="cu-tag bg-green light sm round">{{runinfo_data[0].time_data}}</view>
 								<view class="cu-tag bg-orange light sm round">{{runinfo_data[0].speed_data}}</view>

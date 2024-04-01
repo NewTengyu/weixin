@@ -24,10 +24,10 @@ App({
     //     this.globalData.openid = res.result.openid;
     //   }
     // })
-    wx.showShareMenu({
-      withShareTicket: true,
-      menus: ['shareAppMessage', 'shareTimeline']
-    })
+    // wx.showShareMenu({
+    //   withShareTicket: true,
+    //   menus: ['shareAppMessage', 'shareTimeline']
+    // })
     // 登录
     wx.login({success: res => {}})
     // 获取用户信息
